@@ -84,7 +84,7 @@ const InformatioModule = () => {
         </div>
         <div>
           <div>
-            <span>Shipping to: Denmark</span>
+            <span className="cart-note">Shipping to Denmark</span>
           </div>
           <div className="form-row">
             <div className="row-wrapper half-row">
