@@ -18,7 +18,6 @@ const Success = ({ location }) => {
     Medusa.orders
       .retrieve(order_id)
       .then(({ data }) => {
-        console.log(data);
         setOrder(data.order);
         setLoading(false);
         dispatch(clearCart());
@@ -27,19 +26,21 @@ const Success = ({ location }) => {
         setError(true);
         setLoading(false);
       });
-  }, []);
+  }, [location.search]);
 
   return (
     <div className="checkout-container">
       <Link to="/">
         <h1>brand</h1>
       </Link>
-      <div className="wrapper">
-        <p>Payment successful – Thank you for your order!</p>
-        {order?.items?.map((i) => {
-          return <CartItem key={i.id} {...i} />;
-        })}
-      </div>
+      {!loading && !error ? (
+        <div className="wrapper">
+          <p>Payment successful – Thank you for your order!</p>
+          {order?.items?.map((i) => {
+            return <CartItem key={i.id} {...i} />;
+          })}
+        </div>
+      ) : null}
     </div>
   );
 };

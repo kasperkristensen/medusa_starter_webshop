@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Medusa from "../services/medusa";
 import { useSelector, useDispatch } from "react-redux";
 import { formatPrice } from "../utils/formatPrice";
-import { StaticImage } from "gatsby-plugin-image";
 
 const Product = (props) => {
   const [selectedAmount, setSelectedAmount] = useState(1);
@@ -27,15 +26,13 @@ const Product = (props) => {
         })
         .catch((_e) => {
           setLoading(false);
-          console.log(_e);
         });
     }
   };
 
   useEffect(() => {
     if (props) setSelectedVariantId(props.variants[0].id);
-    console.log(props);
-  }, []);
+  }, [props]);
 
   const handleOptionChange = (variantId) => {
     setSelectedVariantId(variantId);
@@ -108,7 +105,6 @@ const Product = (props) => {
               className="add-to-cart"
               disabled={loading ? true : ""}
               onClick={() => {
-                console.log(selectedVariantId);
                 handleAddToCart(selectedVariantId);
               }}
             >

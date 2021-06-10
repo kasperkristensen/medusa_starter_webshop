@@ -1,5 +1,4 @@
 import React from "react";
-import Medusa from "../services/medusa";
 import { useSelector, useDispatch } from "react-redux";
 import { updateItemQuantity } from "../state/cart";
 import { formatPrice } from "../utils/formatPrice";

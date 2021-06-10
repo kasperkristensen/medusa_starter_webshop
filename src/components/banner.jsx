@@ -1,9 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import ShoppingCart from "./shoppingCart";
 
 const Banner = () => {
-  const cart = useSelector((state) => state.cart.cart);
   return (
     <div className="top-bar flex-between">
       <div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "gatsby";
 import { FiChevronRight } from "react-icons/fi";
 import InformatioModule from "../../components/informationModule";
@@ -7,7 +7,6 @@ import Medusa from "../../services/medusa";
 import { useSelector, useDispatch } from "react-redux";
 import ShippingModule from "../../components/shippingModule";
 import PaymentModule from "../../components/paymentModule";
-import { updateCheckoutStep } from "../../state/cart";
 import StepOverview from "../../components/stepOverView";
 
 const Payment = () => {

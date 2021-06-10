@@ -6,7 +6,6 @@ import { quantity, sum } from "../utils/extensionFunctions";
 const ShoppingCart = () => {
   const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
-  console.log(cart);
   return (
     <button className="cart-btn" onClick={() => dispatch(activeCart())}>
       <span className="mr-1">Cart</span>

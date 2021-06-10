@@ -59,7 +59,6 @@ const InformatioModule = () => {
         last_name: sa.last_name,
         email: email,
       });
-      console.log(customerInfo);
     }
   }, [cart]);
 
