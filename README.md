@@ -10,7 +10,6 @@
     Copy the template enviroment file, and add a Stripe test key.
 
     ```shell
-    # copy template
     touch .env.development
     ```
     It should look like this
